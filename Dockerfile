@@ -12,4 +12,5 @@ RUN     add-apt-repository ppa:jonathonf/ffmpeg-4 && \
         rm -rf /var/lib/apt/lists/*
 
 MAINTAINER  Colin McFadden <mcfa0086@umn.edu>
+
 WORKDIR     /scratch/
