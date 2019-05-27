@@ -8,7 +8,7 @@ RUN     apt-get -yqq update && \
 
 RUN     add-apt-repository ppa:jonathonf/ffmpeg-4 && \
         apt-get -yqq update && \
-        apt-get --no-install-recommends -yqq install gpac ffmpeg="7:4.1.1-0york1~18.04" && \
+        apt-get --no-install-recommends -yqq install gpac ffmpeg="7:4.1.3-0york1~18.04" && \
         rm -rf /var/lib/apt/lists/*
 
 MAINTAINER  Colin McFadden <mcfa0086@umn.edu>
