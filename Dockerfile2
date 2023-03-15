@@ -1,4 +1,4 @@
-FROM        ubuntu:18.04 as build
+FROM        ubuntu:22.04 as build
 
 WORKDIR     /tmp/workdir
 
@@ -6,9 +6,8 @@ RUN     apt-get -yqq update && \
         apt-get --no-install-recommends -yqq install software-properties-common && \
         rm -rf /var/lib/apt/lists/*
 
-RUN     add-apt-repository ppa:jonathonf/ffmpeg-4 && \
-        apt-get -yqq update && \
-        apt-get --no-install-recommends -yqq install gpac ffmpeg="7:4.3.2-0york0~18.04" && \
+RUN     apt-get -yqq update && \
+        apt-get --no-install-recommends -yqq install gpac ffmpeg && \
         rm -rf /var/lib/apt/lists/*
 
 MAINTAINER  Colin McFadden <mcfa0086@umn.edu>
